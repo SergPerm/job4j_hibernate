@@ -40,7 +40,8 @@ public class HiberRun {
                 System.out.println(st);
             }
 
-            session.createQuery("update Candidate c set c.salary = :newSalary, c.experience = :newExperience where c.id = :fId")
+            session.createQuery("update Candidate c set c.salary = :newSalary, "
+                            + "c.experience = :newExperience where c.id = :fId")
                     .setParameter("newSalary", 320f)
                     .setParameter("newExperience", "London City Bank 7 years")
                     .setParameter("fId", 1)
